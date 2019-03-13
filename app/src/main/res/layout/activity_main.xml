@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,15 +8,43 @@
 
     <EditText
         android:id="@+id/username"
-        android:layout_width="match_parent"
+        style="@android:style/Widget.EditText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:layout_margin="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="Enter Username"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login"
         android:id="@+id/login"
-        android:layout_marginTop="100dp"/>
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="307dp"
+        android:fontFamily="@font/aclonica"
+        android:padding="16dp"
+        android:text="Login/Register"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
